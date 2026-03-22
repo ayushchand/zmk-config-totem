@@ -37,6 +37,14 @@
     };
 };
 
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 16)>, <NRF_PSEL(TWIM_SCL, 0, 8)>;
+        };
+    };
+};
+
 &i2c0 {
     pinctrl-0 = <&i2c0_default>;
     pinctrl-names = "default";
@@ -54,5 +62,5 @@
         com-invdir;
         inversion-on;
         prechargep = <0x22>;
-        };
     };
+};

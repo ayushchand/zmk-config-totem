@@ -38,6 +38,8 @@
 };
 
 &i2c0 {
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-names = "default";
     status = "okay";
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
